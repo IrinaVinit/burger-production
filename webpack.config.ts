@@ -1,24 +1,21 @@
-import path from "path";
 import webpack from "webpack";
-import { buildPlugins } from "./config/build/buildPlugins";
-import { buildLoaders } from "./config/build/buildLoaders";
-import { buildResolvers } from "./config/build/buildResolvers";
+import { buildWebpackConfig } from "./config/build/buildWebpackConfig";
+import { BuildPaths } from "./config/build/types/config";
+import path from "path";
 
-const config: webpack.Configuration = {
-  mode: "development",
+const paths: BuildPaths = {
   entry: path.resolve(__dirname, "./src/index.ts"),
-  output: {
-    path: path.resolve(__dirname, "build"),
-    filename: "[name].[contenthash].js",
-    clean: true,
-  },
-  plugins: buildPlugins(),
-  module: {
-    // здесь обрабатываются файлы, которые выходяь за рамки js. Для этого нужны разные лоадеры
-    rules: buildLoaders(),
-  },
-  // в resolve указываем расширения, для которых при импорте не будем это расширение указывать
-  resolve: buildResolvers(),
-};
+  build:  path.resolve(__dirname, "build") ,
+  html: path.resolve(__dirname, "public", "index.html")
+}
+
+const mode = 'development';
+const isDev = mode === 'development';
+
+const config: webpack.Configuration = buildWebpackConfig({
+  mode: 'development',
+  paths, 
+  isDev
+})
 
 export default config;
