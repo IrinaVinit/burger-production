@@ -6,7 +6,7 @@ import { buildResolvers } from "./buildResolvers";
 import { buildDevServer } from "./buildDevServer";
 
 export function buildWebpackConfig(options: BuildOptions): Configuration {
-    const {paths, mode} = options;
+    const {paths, mode, isDev} = options;
     return {
         mode,
         entry: paths.entry,
@@ -22,7 +22,7 @@ export function buildWebpackConfig(options: BuildOptions): Configuration {
         },
         // в resolve указываем расширения, для которых при импорте не будем это расширение указывать
         resolve: buildResolvers(),
-        devtool: 'inline-source-map',
-        devServer: buildDevServer(options)
+        devtool: isDev ? 'inline-source-map' : undefined,
+        devServer: isDev ? buildDevServer(options) : undefined
       };
 }
