@@ -1,7 +1,3 @@
-.header {
-  background: #1c1c21;
-}
-
 .wrapper {
   max-width: 1920px;
   margin: 0 auto;
@@ -14,4 +10,22 @@
   align-items: center;
   justify-items: center;
 }
-  
+
+.navList {
+  display: flex;
+  gap: 8px;
+  justify-self: start;
+}
+
+.link {
+  text-decoration: none;
+  display: flex;
+  cursor: pointer;
+  color: #8585AD;
+}
+
+.account {
+  display: flex;
+  justify-self: end;
+  cursor: pointer;
+}
