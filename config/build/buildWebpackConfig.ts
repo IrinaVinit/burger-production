@@ -18,7 +18,7 @@ export function buildWebpackConfig(options: BuildOptions): Configuration {
         plugins: buildPlugins(options),
         module: {
           // здесь обрабатываются файлы, которые выходяь за рамки js. Для этого нужны разные лоадеры
-          rules: buildLoaders(),
+          rules: buildLoaders(options),
         },
         // в resolve указываем расширения, для которых при импорте не будем это расширение указывать
         resolve: buildResolvers(),
