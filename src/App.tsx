@@ -1,6 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 import { AppHeader } from "./components/AppHeader";
-import "./index.scss";
+import "../src/styles/index.scss";
 
 import { MainPageAsync } from "./pages/MainPage/MainPage.async";
 import { FeedPageAsync } from "./pages/FeedPage/FeedPage.async";
