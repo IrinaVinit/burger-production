@@ -1,9 +1,11 @@
 import {render} from "react-dom";
+import { AppHeader } from "./components/AppHeader";
+import App from "./App";
 
 
 render(
     <div>
-        ghgjhjghjg
+        <App/>
     </div>,
     document.getElementById('root')
 )
