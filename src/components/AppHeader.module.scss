@@ -1,4 +1,17 @@
-.btn{
-    color: green;
-  }
+.header {
+  background: #1c1c21;
+}
+
+.wrapper {
+  max-width: 1920px;
+  margin: 0 auto;
+}
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(min-content, 1fr));
+  align-items: center;
+  justify-items: center;
+}
   

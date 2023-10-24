@@ -1,16 +1,20 @@
-// import { Route, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import { AppHeader } from "./components/AppHeader";
 import "./index.scss";
-// import FeedPage from "./pages/FeedPage/FeedPage";
+
+import { MainPageAsync } from "./pages/MainPage/MainPage.async";
+import { FeedPageAsync } from "./pages/FeedPage/FeedPage.async";
+import { LoginPageAsync } from "./pages/LoginPage/LoginPage.acync";
 
 const App = () => {
   return (
     <div className="app">
-      {/* <Routes> */}
-        <AppHeader />
-        {/* <Route path='/feed' element={<FeedPage/>}/>
-        <Route path ="/login"/> */}
-      {/* </Routes> */}
+      <AppHeader />
+      <Routes>
+        <Route path="/" element={<MainPageAsync />} />
+        <Route path='/feed' element={<FeedPageAsync/>}/>
+        <Route path ="/login" element={<LoginPageAsync/>}/>
+      </Routes>
     </div>
   );
 };
