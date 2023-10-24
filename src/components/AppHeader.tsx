@@ -24,6 +24,7 @@ export function AppHeader() {
               <Link to={"/login"}>
                 <p className="text text_type_main-default pl-2 pr-5">Личный кабинет</p>
               </Link>
+             
             </div>
         </div>
 

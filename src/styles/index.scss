@@ -2,9 +2,11 @@
 @import 'reset';
 @import 'themes/light';
 @import "themes/dark";
+@import "themes/blue";
 
 .app {
     background: var(--bg-color);
     color: var(--primary-color);
     min-height: 100vh;
+    font-family: var(--font-family-main);
 }
