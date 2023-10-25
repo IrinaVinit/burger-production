@@ -6,13 +6,14 @@ import { FeedPageAsync } from "./pages/FeedPage/FeedPage.async";
 import { LoginPageAsync } from "./pages/LoginPage/LoginPage.acync";
 import { Suspense} from "react";
 import { useTheme } from "./theme/useTheme";
+import { classNames } from "./helpers/classNames/classNames";
 
 
 const App = () => {
   const {theme} = useTheme();
 
   return (
-    <div className={`app ${theme}`}>
+    <div className={classNames('app', {}, [theme])}>
       <AppHeader />
       <Suspense fallback={<div>Loading...</div>}>
         <Routes>
