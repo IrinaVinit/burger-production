@@ -1,8 +1,15 @@
 import { Link } from "react-router-dom";
 import { Logo } from "@ya.praktikum/react-developer-burger-ui-components";
 import cls from "./AppHeader.module.scss";
+import { useContext } from "react";
+import { ThemeContext } from "../theme/ThemeContext";
 
 export function AppHeader() {
+  const {theme, setTheme} = useContext(ThemeContext);
+
+  const toogleTheme = () => {
+    setTheme(theme === 'dark' ? 'light' :  theme === 'light' ? 'blue' : 'dark' )
+  }
   return (
     <header>
       <div className={cls.wrapper}>
@@ -24,7 +31,7 @@ export function AppHeader() {
               <Link to={"/login"}>
                 <p className="text text_type_main-default pl-2 pr-5">Личный кабинет</p>
               </Link>
-             
+              <button onClick={toogleTheme}>ch</button>
             </div>
         </div>
 

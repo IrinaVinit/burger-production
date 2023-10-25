@@ -9,15 +9,11 @@ import { ThemeContext } from "./theme/ThemeContext";
 
 
 const App = () => {
-  const {theme, setTheme} = useContext(ThemeContext)
-  const toogleTheme = () => {
-    setTheme(theme === 'dark' ? 'light' : 'dark')
-  }
+  const {theme} = useContext(ThemeContext)
 
   return (
     <div className={`app ${theme}`}>
       <AppHeader />
-      <button onClick={toogleTheme}>ch</button>
       <Suspense fallback={<div>Loading...</div>}>
         <Routes>
           <Route path="/" element={<MainPageAsync />} />
