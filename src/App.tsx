@@ -4,18 +4,16 @@ import "./styles/index.scss";
 import { MainPageAsync } from "./pages/MainPage/MainPage.async";
 import { FeedPageAsync } from "./pages/FeedPage/FeedPage.async";
 import { LoginPageAsync } from "./pages/LoginPage/LoginPage.acync";
-import { Suspense, useState } from "react";
-
-export type Theme = 'light' | 'dark' | 'blue'
+import { Suspense, useContext } from "react";
+import { ThemeContext } from "./theme/ThemeContext";
 
 
 const App = () => {
-  const [theme, setTheme] = useState<Theme>('light');
-
-
+  const {theme, setTheme} = useContext(ThemeContext)
   const toogleTheme = () => {
     setTheme(theme === 'dark' ? 'light' : 'dark')
   }
+
   return (
     <div className={`app ${theme}`}>
       <AppHeader />
