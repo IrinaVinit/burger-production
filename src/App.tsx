@@ -4,12 +4,12 @@ import "./styles/index.scss";
 import { MainPageAsync } from "./pages/MainPage/MainPage.async";
 import { FeedPageAsync } from "./pages/FeedPage/FeedPage.async";
 import { LoginPageAsync } from "./pages/LoginPage/LoginPage.acync";
-import { Suspense, useContext } from "react";
-import { ThemeContext } from "./theme/ThemeContext";
+import { Suspense} from "react";
+import { useTheme } from "./theme/useTheme";
 
 
 const App = () => {
-  const {theme} = useContext(ThemeContext)
+  const {theme} = useTheme();
 
   return (
     <div className={`app ${theme}`}>

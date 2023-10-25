@@ -3,13 +3,12 @@ import { Logo } from "@ya.praktikum/react-developer-burger-ui-components";
 import cls from "./AppHeader.module.scss";
 import { useContext } from "react";
 import { ThemeContext } from "../theme/ThemeContext";
+import { useTheme } from "../theme/useTheme";
 
 export function AppHeader() {
-  const {theme, setTheme} = useContext(ThemeContext);
+  const {toogleTheme} = useTheme();
 
-  const toogleTheme = () => {
-    setTheme(theme === 'dark' ? 'light' :  theme === 'light' ? 'blue' : 'dark' )
-  }
+  
   return (
     <header>
       <div className={cls.wrapper}>
