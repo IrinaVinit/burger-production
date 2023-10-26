@@ -1,12 +1,12 @@
 import { Route, Routes } from "react-router-dom";
-import { AppHeader } from "./components/AppHeader";
+import { AppHeader } from "../sheared/ui/AppHeader/AppHeader";
 import "./styles/index.scss";
-import { MainPageAsync } from "./pages/MainPage/MainPage.async";
-import { FeedPageAsync } from "./pages/FeedPage/FeedPage.async";
-import { LoginPageAsync } from "./pages/LoginPage/LoginPage.acync";
+import { MainPageAsync } from "../pages/MainPage/MainPage.async";
+import { FeedPageAsync } from "../pages/FeedPage/FeedPage.async";
+import { LoginPageAsync } from "../pages/LoginPage/LoginPage.acync";
 import { Suspense} from "react";
-import { useTheme } from "./theme/useTheme";
-import { classNames } from "./helpers/classNames/classNames";
+import { classNames } from "../helpers/classNames/classNames";
+import { useTheme } from "app/providers/ThemeProvider/ui";
 
 
 const App = () => {

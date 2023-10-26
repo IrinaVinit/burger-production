@@ -1,9 +1,8 @@
 import { Link } from "react-router-dom";
 import { Logo } from "@ya.praktikum/react-developer-burger-ui-components";
 import cls from "./AppHeader.module.scss";
-import { useContext } from "react";
-import { ThemeContext } from "../theme/ThemeContext";
-import { useTheme } from "../theme/useTheme";
+import { useTheme } from "../../../app/providers/ThemeProvider/ui";
+
 
 export function AppHeader() {
   const {toogleTheme} = useTheme();
