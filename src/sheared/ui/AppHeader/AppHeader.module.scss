@@ -1,6 +1,7 @@
 .wrapper {
   max-width: 1920px;
   margin: 0 auto;
+  background-color: var(--background_color_header);
 }
 .container {
   max-width: 1280px;
@@ -9,6 +10,7 @@
   grid-template-columns: repeat(3, minmax(min-content, 1fr));
   align-items: center;
   justify-items: center;
+  min-height: 88px;
 }
 
 .link {
