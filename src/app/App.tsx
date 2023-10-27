@@ -5,7 +5,6 @@ import { useTheme } from "app/providers/ThemeProvider/ui";
 import { AppRouter } from "./providers/router";
 
 
-
 const App = () => {
   const {theme} = useTheme();
 
