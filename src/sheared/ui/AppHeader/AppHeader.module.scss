@@ -10,14 +10,8 @@
   grid-template-columns: repeat(3, minmax(min-content, 1fr));
   align-items: center;
   justify-items: center;
-  min-height: 88px;
-}
-
-.link {
-  text-decoration: none;
-  display: flex;
-  cursor: pointer;
-  color: #8585AD;
+  min-height: var(--navbar-height);
+  color: var(--text_color_header);
 }
 
 .account {

@@ -1,6 +1,6 @@
-import { Link } from "react-router-dom";
 import { classNames } from "sheared/lib/classNames/classNames";
 import cls from './NavBar.module.scss';
+import AppLink from "sheared/ui/AppLink/AppLink";
 
 interface NavBarProps {
     className?: string;
@@ -9,15 +9,16 @@ interface NavBarProps {
 const NavBar = ({ className }: NavBarProps) => {
     return (
         <nav className={classNames(cls.navList, {}, [className, 'pb-4', 'pt-4'])}>
-            <Link to={"/"}>
-              {" "}
-              <p className="text text_type_main-default pl-2">Конструктор</p>
-            </Link>
-            <Link to={"/feed"}>
-              {" "}
-              <p className="text text_type_main-default pl-2">Лента заказов</p>
-            </Link>
-           
+            <AppLink to={"/"}>
+              {/* <p className="text text_type_main-default pl-2"> */}
+                Конструктор
+                {/* </p> */}
+            </AppLink>
+            <AppLink to={"/feed"}>
+              {/* <p className="text text_type_main-default pl-2"> */}
+                Лента заказов
+                {/* </p> */}
+            </AppLink>
           </nav>
     );
 };

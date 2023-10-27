@@ -2,11 +2,7 @@
     display: flex;
     gap: 8px;
     justify-self: start;
+    text-decoration: none;
+    cursor: pointer;
   }
   
-  .link {
-    text-decoration: none;
-    display: flex;
-    cursor: pointer;
-    color: #8585AD;
-  }
