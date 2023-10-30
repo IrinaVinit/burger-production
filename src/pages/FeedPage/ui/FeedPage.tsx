@@ -1,8 +1,10 @@
+import { useTranslation } from "react-i18next";
 
 const FeedPage = () => {
+    const { t, i18n } = useTranslation('feedPage');
     return (
         <div>
-            FEED
+               {t('Лента заказов')}
         </div>
     );
 };

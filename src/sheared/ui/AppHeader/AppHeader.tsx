@@ -17,6 +17,7 @@ export const AppHeader = ({className}: AppHeader) => {
     <header className={classNames(cls.header, {}, [className])}>
       <div className={cls.wrapper}>
         <div className={cls.container}>
+          
          <NavBar/>
           {/* <Logo /> */}
           <div>Logo</div>
