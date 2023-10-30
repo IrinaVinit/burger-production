@@ -14,7 +14,6 @@ const App = () => {
     <div className={classNames('app', {}, [theme])}>
       <Suspense fallback="loading">
       <AppHeader />
-      
       <AppRouter/>
       </Suspense>
     </div>

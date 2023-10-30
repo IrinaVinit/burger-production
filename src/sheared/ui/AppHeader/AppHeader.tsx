@@ -5,6 +5,7 @@ import { classNames } from "sheared/lib/classNames/classNames";
 import AppLink from "../AppLink/AppLink";
 import { ThemeSwitcher } from "../ThemeSwitcher";
 import { useTranslation } from "react-i18next";
+import { LangSwitcher } from "../LangSwitcher/ui/LangSwitcher";
 
 
 interface AppHeader {
@@ -24,6 +25,7 @@ export const AppHeader = ({className}: AppHeader) => {
           <div className={`${cls.account} pb-4 pt-4 pl-5 pr-5`}>
               <AppLink to={"/login"}> {t('Личный кабинет')}               
               </AppLink>
+            <LangSwitcher/>
             <ThemeSwitcher/>  
             </div>
         </div>
