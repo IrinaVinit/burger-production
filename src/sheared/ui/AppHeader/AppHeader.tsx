@@ -19,10 +19,12 @@ export const AppHeader = ({ className = '' }: AppHeaderRes) => {
                 <div className={cls.container}>
                     <NavBar />
                     {/* <Logo /> */}
-                    <div>Logo</div>
+                    <div>
+                        {' '}
+                        {t('Лого')}
+                    </div>
                     <div className={`${cls.account} pb-4 pt-4 pl-5 pr-5`}>
                         <AppLink to="/login">
-                            {' '}
                             {t('Личный кабинет')}
                         </AppLink>
                         <LangSwitcher />
