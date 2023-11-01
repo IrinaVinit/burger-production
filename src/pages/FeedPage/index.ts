@@ -1,4 +1,3 @@
-import { FeedPageAsync } from "./ui/FeedPage.async";
+import { FeedPageAsync } from './ui/FeedPage.async'
 
-
-export{ FeedPageAsync as FeedPage};
+export { FeedPageAsync as FeedPage }

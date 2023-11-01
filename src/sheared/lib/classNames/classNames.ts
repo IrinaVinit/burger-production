@@ -1,6 +1,6 @@
-type Mods = Record<string, boolean | string>;
+type Mods = Record<string, boolean | string>
 
-export function classNames(
+export function classNames (
   cls: string,
   mods: Mods = {},
   additional: string[] = []
@@ -10,6 +10,6 @@ export function classNames(
     ...additional.filter(Boolean),
     ...Object.entries(mods)
       .filter(([key, value]) => Boolean(value))
-      .map(([key, value]) => key),
-  ].join(" ");
+      .map(([key, value]) => key)
+  ].join(' ')
 }

@@ -1,19 +1,19 @@
-import { Suspense } from "react";
-import { Route, Routes } from "react-router-dom";
-import { routeConfig } from "sheared/config/routeConfig/routeConfig";
+import { Suspense } from 'react';
+import { Route, Routes } from 'react-router-dom';
+import { routeConfig } from 'sheared/config/routeConfig/routeConfig';
 
-const AppRouter = () => {
-  return (
+const AppRouter = () => (
     <Suspense fallback={<div>Loading...</div>}>
-    <Routes>
-     {Object.values(routeConfig).map(({element, path}) => (
-      <Route key = {path} 
-      element = {element}
-      path = {path}/>
-     ))}
-    </Routes>
-  </Suspense>
-  );
-};
+        <Routes>
+            {Object.values(routeConfig).map(({ element, path }) => (
+                <Route
+                    key={path}
+                    element={element}
+                    path={path}
+                />
+            ))}
+        </Routes>
+    </Suspense>
+);
 
 export default AppRouter;
