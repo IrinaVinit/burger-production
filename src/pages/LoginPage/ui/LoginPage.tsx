@@ -1,11 +1,10 @@
-import { useTranslation } from "react-i18next";
-
+import { useTranslation } from 'react-i18next';
 
 const LoginPage = () => {
-  const { t, i18n } = useTranslation('loginPage');
+    const { t, i18n } = useTranslation('loginPage');
     return (
         <div>
-          {t('Личный кабинет')}
+            {t('Личный кабинет')}
         </div>
     );
 };

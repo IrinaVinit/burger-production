@@ -1,8 +1,7 @@
 import './styles/index.scss';
 import { Suspense } from 'react';
-import { classNames } from 'sheared/lib/classNames/classNames';
-import { AppHeader } from 'sheared/ui/AppHeader/AppHeader';
-import Loader from 'sheared/ui/Loader/Loader';
+import { classNames } from 'shared/lib/classNames/classNames';
+import { AppHeader } from 'shared/ui/AppHeader/AppHeader';
 import PageLoader from 'widgets/PageLoader/PageLoader';
 import { AppRouter } from './providers/router';
 import { useTheme } from './providers/ThemeProvider';
